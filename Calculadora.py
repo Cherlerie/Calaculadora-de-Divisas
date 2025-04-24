@@ -1,14 +1,13 @@
 def exchange_money(budget, exchange_rate):
-    return budget / exchange_rate
+    return budget * exchange_rate
 
-print("Tasas de ejemplo:")
-print("- JPY: 0.0075 (1 JPY = 0.0075 USD)")
-print("- MXN: 0.058 (1 MXN = 0.058 USD)")
-print("- EUR: 1.05 (1 EUR = 1.05 USD)")
+print("Tasas de ejemplo (1 DOP = X moneda extranjera):")
+print("- DOP a USD: 0.017 (1 DOP = 0.017 USD)")
+print("- DOP a EUR: 0.015 (1 DOP = 0.015 EUR)")
+print("- DOP a JPY: 2.41 (1 DOP = 2.41 JPY)")
 
-
-budget = float(input("\nIngresa tu presupuesto en USD: "))
-exchange_rate = float(input("Ingresa la tasa de cambio (ej: 0.0075 para JPY): "))
+budget = float(input("\nIngresa tu presupuesto en DOP: "))
+exchange_rate = float(input("Ingresa la tasa de cambio: "))
 
 result = exchange_money(budget, exchange_rate)
-print(f"\n💵 {budget} USD = {result:.2f} (Moneda extranjera)")
+print(f"\n💵 {budget} DOP = {result:.2f} (Moneda extranjera)")
